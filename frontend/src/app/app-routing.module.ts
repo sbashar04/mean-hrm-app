@@ -1,15 +1,20 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { EmployeeCreateComponent } from './components/employee-create/employee-create.component';
-import { EmployeeListComponent } from './components/employee-list/employee-list.component';
-import { EmployeeEditComponent } from './components/employee-edit/employee-edit.component';
+import { EmployeeCreateComponent } from './components/screens/employee/employee-create/employee-create.component';
+import { DashboardHomeComponent } from './components/screens/dashboard-home/dashboard-home.component';
+import { EmployeeEditComponent } from './components/screens/employee/employee-edit/employee-edit.component';
+import { EmployeeListComponent } from './components/screens/employee/employee-list/employee-list.component';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'create-employee' },
-  { path: 'create-employee', component: EmployeeCreateComponent },
-  { path: 'edit-employee/:id', component: EmployeeEditComponent },
-  { path: 'employees-list', component: EmployeeListComponent }  
+  { path: '', component: DashboardHomeComponent },
+  {
+    path: 'employee', children: [
+      {path: 'list', component: EmployeeListComponent},
+      {path: 'create', component: EmployeeCreateComponent},
+      {path: 'edit/:id', component: EmployeeEditComponent}
+    ]
+  },
 ];
 
 @NgModule({

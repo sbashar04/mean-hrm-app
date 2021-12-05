@@ -27,10 +27,15 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/assets/css/bootstrap.min.css",
+              "src/assets/css/lineicons.css",
+              "src/assets/css/materialdesignicons.min.css",
+              "src/assets/css/main.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/bootstrap.bundle.min.js"
+            ]
           },
           "configurations": {
             "production": {

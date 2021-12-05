@@ -1,6 +1,24 @@
-<nav>
-  <a routerLinkActive="active" routerLink="/employees-list">View Employees</a>
-  <a routerLinkActive="active" routerLink="/create-employee">Add Employee</a>
-</nav>
+<!-- ======== sidebar-nav start =========== -->
+<app-sidebar></app-sidebar>
+<!-- ======== sidebar-nav end =========== -->
 
-<router-outlet></router-outlet>
+<!-- ======== main-wrapper start =========== -->
+<main class="main-wrapper">
+  <!-- ========== header start ========== -->
+  <app-header></app-header>
+  <!-- ========== header end ========== -->
+
+  <!-- ========== section start ========== -->
+  <section class="section">
+    <div class="container-fluid">
+      <router-outlet></router-outlet>
+    </div>
+    <!-- end container -->
+  </section>
+  <!-- ========== section end ========== -->
+
+  <!-- ========== footer start =========== -->
+  <app-footer></app-footer>
+  <!-- ========== footer end =========== -->
+</main>
+<!-- ======== main-wrapper end =========== -->
